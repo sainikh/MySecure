@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
@@ -23,20 +24,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //NavHostFragment setup for 
+
+        //NavHostFragment setup for
          mNavHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController =  mNavHostFragment.navController
 
+        //App BarConfiguration helps you to set different Action bar for different fragment
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.chats_Fragment,R.id.camera_Fragment,R.id.contacts_Fragment,R.id.settings_Fragment))
+
+        //here we wrap navcontroller with BarConfiguration
+        setupActionBarWithNavController(navController,appBarConfiguration)
         //bottom setupWithController is the main show runner here
        binding.bottomNavigationView.setupWithNavController(navController)
-
-
-
-
-
-
-
-
 
 
     }

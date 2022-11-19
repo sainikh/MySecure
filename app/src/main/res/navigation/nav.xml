@@ -8,21 +8,21 @@
     <fragment
         android:id="@+id/chats_Fragment"
         android:name="com.example.mysecure.Chats_Fragment"
-        android:label="fragment_chats_"
+        android:label="Chats"
         tools:layout="@layout/fragment_chats_" />
     <fragment
         android:id="@+id/camera_Fragment"
         android:name="com.example.mysecure.Camera_Fragment"
-        android:label="fragment_camera_"
+        android:label="Camera"
         tools:layout="@layout/fragment_camera_" />
     <fragment
         android:id="@+id/contacts_Fragment"
         android:name="com.example.mysecure.Contacts_Fragment"
-        android:label="fragment_contacts_"
+        android:label="Contacts"
         tools:layout="@layout/fragment_contacts_" />
     <fragment
         android:id="@+id/settings_Fragment"
         android:name="com.example.mysecure.Settings_Fragment"
-        android:label="fragment_settings_"
+        android:label="Settings"
         tools:layout="@layout/fragment_settings_" />
 </navigation>
