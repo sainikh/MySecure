@@ -3,6 +3,7 @@ package com.example.mysecure
 import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mNavHostFragment: NavHostFragment
     private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -35,8 +37,14 @@ class MainActivity : AppCompatActivity() {
         //here we wrap navcontroller with BarConfiguration
         setupActionBarWithNavController(navController,appBarConfiguration)
         //bottom setupWithController is the main show runner here
-       binding.bottomNavigationView.setupWithNavController(navController)
 
+//        if(binding.bottomNavigationView.visibility == View.GONE)
+//        {
+//            binding.bottomNavigationView.visibility = View.VISIBLE
+//        }
+
+        binding.bottomNavigationView.visibility = View.VISIBLE
+       binding.bottomNavigationView.setupWithNavController(navController)
 
     }
 }

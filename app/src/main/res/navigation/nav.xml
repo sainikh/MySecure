@@ -9,7 +9,11 @@
         android:id="@+id/chats_Fragment"
         android:name="com.example.mysecure.Chats_Fragment"
         android:label="Chats"
-        tools:layout="@layout/fragment_chats_" />
+        tools:layout="@layout/fragment_chats_" >
+        <action
+            android:id="@+id/action_chats_Fragment_to_viewDetailsFragment"
+            app:destination="@id/viewDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/camera_Fragment"
         android:name="com.example.mysecure.Camera_Fragment"
@@ -18,11 +22,23 @@
     <fragment
         android:id="@+id/contacts_Fragment"
         android:name="com.example.mysecure.Contacts_Fragment"
-        android:label="Contacts"
+        android:label="My Contacts"
         tools:layout="@layout/fragment_contacts_" />
     <fragment
         android:id="@+id/settings_Fragment"
         android:name="com.example.mysecure.Settings_Fragment"
         android:label="Settings"
         tools:layout="@layout/fragment_settings_" />
+    <fragment
+        android:id="@+id/viewDetailsFragment"
+        android:name="com.example.mysecure.ViewDetailsFragment"
+        android:label="fragment_view_details"
+        tools:layout="@layout/fragment_view_details" >
+        <action
+            android:id="@+id/action_viewDetailsFragment_to_chats_Fragment"
+            app:destination="@id/chats_Fragment" />
+        <argument
+            android:name="groupDataname"
+            app:argType="string" />
+    </fragment>
 </navigation>
