@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
          mNavHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController =  mNavHostFragment.navController
 
+
         //App BarConfiguration helps you to set different Action bar for different fragment
         val appBarConfiguration = AppBarConfiguration(setOf(R.id.chats_Fragment,R.id.camera_Fragment,R.id.contacts_Fragment,R.id.settings_Fragment))
 
@@ -47,4 +48,10 @@ class MainActivity : AppCompatActivity() {
        binding.bottomNavigationView.setupWithNavController(navController)
 
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp()
+    }
+
+
 }

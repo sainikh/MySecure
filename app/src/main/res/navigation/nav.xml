@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/viewDetailsFragment"
         android:name="com.example.mysecure.ViewDetailsFragment"
-        android:label="fragment_view_details"
+        android:label="Chats Info"
         tools:layout="@layout/fragment_view_details" >
         <action
             android:id="@+id/action_viewDetailsFragment_to_chats_Fragment"
