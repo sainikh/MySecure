@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //App BarConfiguration helps you to set different Action bar for different fragment
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.chats_Fragment,R.id.camera_Fragment,R.id.contacts_Fragment,R.id.settings_Fragment))
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.chats_Fragment,R.id.music_Fragment,R.id.contacts_Fragment,R.id.settings_Fragment))
 
         //here we wrap navcontroller with BarConfiguration
         setupActionBarWithNavController(navController,appBarConfiguration)
@@ -48,6 +48,8 @@ class MainActivity : AppCompatActivity() {
        binding.bottomNavigationView.setupWithNavController(navController)
 
     }
+
+    //used to enable back button when back button is pressed inside a fragent stack
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()

@@ -8,7 +8,9 @@
     tools:context=".Chats_Fragment">
 
     3<androidx.recyclerview.widget.RecyclerView
+
         android:id="@+id/recyclerView"
+     android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

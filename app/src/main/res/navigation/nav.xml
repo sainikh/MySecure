@@ -15,11 +15,6 @@
             app:destination="@id/viewDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/camera_Fragment"
-        android:name="com.example.mysecure.Camera_Fragment"
-        android:label="Camera"
-        tools:layout="@layout/fragment_camera_" />
-    <fragment
         android:id="@+id/contacts_Fragment"
         android:name="com.example.mysecure.Contacts_Fragment"
         android:label="My Contacts"
@@ -41,4 +36,9 @@
             android:name="groupDataname"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/music_Fragment"
+        android:name="com.example.mysecure.Music_Fragment"
+        android:label="Music Player"
+        tools:layout="@layout/fragment_music_" />
 </navigation>

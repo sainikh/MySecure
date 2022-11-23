@@ -5,9 +5,9 @@
         android:icon="@drawable/ic_chats"
         />
 
-    <item android:title="Camera"
-        android:id="@+id/camera_Fragment"
-        android:icon="@drawable/ic_camera"/>
+    <item android:title="Music"
+        android:id="@+id/music_Fragment"
+        android:icon="@drawable/ic_musicplayer"/>
 
     <item android:title="Contacts"
         android:id="@+id/contacts_Fragment"
